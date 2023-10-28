@@ -1,0 +1,14 @@
+# https://docs.docker.com/compose/django/
+version: "3.9"
+
+services:
+  app:
+    image: getwildly
+    build: .
+    volumes:
+      - .:/code
+      - app_data:/code
+
+volumes:
+  app_data:
+
